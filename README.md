@@ -595,7 +595,7 @@ var kafka = require('kafkaq'),
 * Compression: gzip & snappy (√)
 
 # LICENSE - "MIT"
-Copyright (c) 2015 Sohu.com
+Copyright (c) 2015 Gautam.co
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
