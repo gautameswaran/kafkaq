@@ -1,6 +1,6 @@
 ### About
 
-Kafka-node is a nodejs client with zookeeper integration for apache Kafka, only support the latest version of kafka 0.8 which is still under development, so this module
+KafkaQ is a nodejs client with zookeeper integration for apache Kafka, only support the latest version of kafka 0.8 which is still under development, so this module
 is `not production ready` so far.
 Zookeeper does the following jobs:
 

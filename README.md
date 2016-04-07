@@ -1,10 +1,7 @@
-Kafka-node
-==========
+KafkaQ
+======
 
-[![NPM](https://nodei.co/npm/kafka-node.png)](https://nodei.co/npm/kafka-node/)
-[![NPM](https://nodei.co/npm-dl/kafka-node.png?height=3)](https://nodei.co/npm/kafka-node/)
-
-Kafka-node is a Node.js client with Zookeeper integration for Apache Kafka 0.8.1 and later.
+Kafkaq is a Node.js client with Zookeeper integration for Apache Kafka 0.8.1 and later.
 
 The Zookeeper integration does the following jobs:
 
@@ -44,7 +41,7 @@ Closes the connection to Zookeeper and the brokers so that the node process can 
 ```
 
 ``` js
-var kafka = require('kafka-node'),
+var kafka = require('kafkaq'),
     Producer = kafka.Producer,
     client = new kafka.Client(),
     producer = new Producer(client);
@@ -79,7 +76,7 @@ var kafka = require('kafka-node'),
 Example:
 
 ``` js
-var kafka = require('kafka-node'),
+var kafka = require('kafkaq'),
     Producer = kafka.Producer,
     KeyedMessage = kafka.KeyedMessage,
     client = new kafka.Client(),
@@ -108,7 +105,7 @@ This method is used to create topics on the Kafka server. It only works when `au
 Example:
 
 ``` js
-var kafka = require('kafka-node'),
+var kafka = require('kafkaq'),
     Producer = kafka.Producer,
     client = new kafka.Client(),
     producer = new Producer(client);
@@ -139,7 +136,7 @@ producer.createTopics(['t'], function (err, data) {});// Simply omit 2nd arg
 ```
 
 ``` js
-var kafka = require('kafka-node'),
+var kafka = require('kafkaq'),
     HighLevelProducer = kafka.HighLevelProducer,
     client = new kafka.Client(),
     producer = new HighLevelProducer(client);
@@ -167,7 +164,7 @@ var kafka = require('kafka-node'),
 Example:
 
 ``` js
-var kafka = require('kafka-node'),
+var kafka = require('kafkaq'),
     HighLevelProducer = kafka.HighLevelProducer,
     client = new kafka.Client(),
     producer = new HighLevelProducer(client),
@@ -192,7 +189,7 @@ This method is used to create topics on the Kafka server. It only work when `aut
 Example:
 
 ``` js
-var kafka = require('kafka-node'),
+var kafka = require('kafkaq'),
     HighLevelProducer = kafka.HighLevelProducer,
     client = new kafka.Client(),
     producer = new HighLevelProducer(client);
@@ -221,7 +218,7 @@ producer.createTopics(['t'], function (err, data) {});// Simply omit 2nd arg
 
 ```js
 {
-    groupId: 'kafka-node-group',//consumer group id, default `kafka-node-group`
+    groupId: 'kafkaq-group',//consumer group id, default `kafkaq-group`
     // Auto commit config
     autoCommit: true,
     autoCommitIntervalMs: 5000,
@@ -240,7 +237,7 @@ producer.createTopics(['t'], function (err, data) {});// Simply omit 2nd arg
 Example:
 
 ``` js
-var kafka = require('kafka-node'),
+var kafka = require('kafkaq'),
     Consumer = kafka.Consumer,
     client = new kafka.Client(),
     consumer = new Consumer(
@@ -380,7 +377,7 @@ consumer.close(cb); //force is disabled
 
 ```js
 {
-    groupId: 'kafka-node-group',//consumer group id, deafult `kafka-node-group`
+    groupId: 'kafkaq-group',//consumer group id, deafult `kafkaq-group`
     // Auto commit config
     autoCommit: true,
     autoCommitIntervalMs: 5000,
@@ -399,7 +396,7 @@ consumer.close(cb); //force is disabled
 Example:
 
 ``` js
-var kafka = require('kafka-node'),
+var kafka = require('kafkaq'),
     HighLevelConsumer = kafka.HighLevelConsumer,
     client = new kafka.Client(),
     consumer = new HighLevelConsumer(
@@ -533,7 +530,7 @@ Fetch the available offset of a specific topic-partition
 Example
 
 ```js
-var kafka = require('kafka-node'),
+var kafka = require('kafkaq'),
     client = new kafka.Client(),
     offset = new kafka.Offset(client);
     offset.fetch([
@@ -560,7 +557,7 @@ var kafka = require('kafka-node'),
 Example
 
 ```js
-var kafka = require('kafka-node'),
+var kafka = require('kafkaq'),
     client = new kafka.Client(),
     offset = new kafka.Offset(client);
     offset.commit('groupId', [
@@ -585,7 +582,7 @@ Fetch the last committed offset in a topic of a specific consumer group
 Example
 
 ```js
-var kafka = require('kafka-node'),
+var kafka = require('kafkaq'),
     client = new kafka.Client(),
     offset = new kafka.Offset(client);
     offset.fetchCommits('groupId', [
